@@ -12,6 +12,8 @@ import torch
 import os
 from datetime import datetime
 import ast
+import io
+from io import BytesIO
 
 st.set_page_config(layout='wide')
 lists=['site','subject','verbatim','decode','start_date','start_time',
