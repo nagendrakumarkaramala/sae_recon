@@ -34,22 +34,7 @@ merge_cols="subject,verbatim,decode,start_date,end_date"
 
 lists2=lists
 
-def readSRCfile(fname,fmt):
-    try:
-        if fmt=='CSV':
-            ds=pd.read_csv(fname)
-        elif fmt=='EXCEL' or fmt=='XLS' or fmt=='XLSX':
-            ds=pd.read_excel(fname)
-    except FileNotFoundError:
-        print(f"File {fname} not found.  Aborting")
-        sys.exit(1)
-    except OSError:
-        print(f"OS error occurred trying to open {fname}")
-        sys.exit(1)
-    except Exception as err:
-        print(f"Unexpected error opening {fname} is",repr(err))
-        sys.exit(1)  
-    return ds
+
 
 def dfHasData(df):
     return df.empty
