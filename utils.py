@@ -18,6 +18,8 @@ import torch
 import os
 from datetime import datetime
 import ast
+import io
+from io import BytesIO
 
 # Load model from HuggingFace Hub
 tokenizer = AutoTokenizer.from_pretrained("neuml/pubmedbert-base-embeddings")
