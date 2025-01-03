@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import warnings
 warnings.filterwarnings("ignore")
-import matplotlib as plt
 import json
 import utils
 from utils import reconcile
