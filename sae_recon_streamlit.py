@@ -37,7 +37,6 @@ uploaded_file = col1.file_uploader("Choose Clinical file in Excel format")
 if uploaded_file is not None:
     file_bytes = BytesIO(uploaded_file.read())
     df = pd.read_excel(file_bytes)
-    #df = pd.read_excel(uploaded_file)
     std_selected_options = col1.multiselect("Select standard one or more options:",
         lists)
     col1.text(std_selected_options)    
@@ -53,7 +52,6 @@ uploaded_file2 = col2.file_uploader("Choose Safety file in Excel format")
 if uploaded_file is not None:
     file_bytes = BytesIO(uploaded_file.read())
     df2= pd.read_excel(file_bytes)
-    #df2 = pd.read_excel(uploaded_file2)    
     std_selected_options2 = col2.multiselect("Select standard one or more options 2:",
         lists2)
     col2.text(std_selected_options2)   
